@@ -26,7 +26,7 @@ while (tickets <= args.tickets):
 			time.sleep(1)
 			i=i+1
 			shuffle(Balls)
-		rgen=randint(1,BallsCnt)
+		rgen=randint(1,BallsCnt)-1
 		LottoBalls = LottoBalls + " " + str(Balls[rgen])
 		Balls.pop(rgen)
 		BallsCnt=BallsCnt-1
@@ -36,7 +36,7 @@ while (tickets <= args.tickets):
 		i=i+1
 		shuffle(MBalls)
 
-	LottoBalls = LottoBalls + " MegaBall: " + str(MBalls[randint(1,25)])
+	LottoBalls = LottoBalls + " MegaBall: " + str(MBalls[randint(1,25)-1])
 
 	print ("Ticket " + str(tickets) + ":---> " + LottoBalls)
 	tickets=tickets+1
